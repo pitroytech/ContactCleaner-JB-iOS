@@ -2,7 +2,11 @@
 
 **[⬇ Download Latest Windows .exe (Releases)](https://github.com/pitroytech/ContactCleaner-JB-iOS/releases/latest)** | **[English](#english)** | **[Tiếng Việt](#tiếng-việt)**
 
-![Contact Cleaner for JB iOS Screenshot](assets/ctac.png)
+![Contact Cleaner for JB iOS Workspace & Zero-Phone-Loss Verification](assets/ctac.png)
+
+| 1. Home Screen (Clean Contacts & Offline Backup Vault) | 2. 3-Step USB & Frida Preflight Check |
+|---|---|
+| [![Home Screen](assets/ct2.jpg)](assets/ct2.jpg) | [![3-Ring Preflight Check](assets/ct3.jpg)](assets/ct3.jpg) |
 
 ---
 
@@ -97,11 +101,11 @@ Contact Cleaner already bundles Frida for Windows inside the `.exe`. Your iPhone
 
 #### Part 4: Connect Through the 3 Preflight Rings
 
-1. On the Contact Cleaner home screen, switch to **EN** in the top-right corner and click **Clean Live Contacts ->**.
-2. **Ring 1 (Turn Off Auto-Lock):** Check the confirmation box after setting Auto-Lock to **Never** on your iPhone.
-3. **Ring 2 (Connect USB Cable):** Click **Check USB Connection** and confirm your iPhone model appears.
-4. **Ring 3 (Check Environment & Frida):** Keep your iPhone unlocked on the Home Screen, then click **Check Environment & Frida**. Allow Contacts access on the iPhone if asked once.
-5. Click **Load Contacts & Start Review ->**. The app saves an automatic baseline backup (`.vcf` + `.json`) on your PC and opens Step `1.1`.
+1. On the Contact Cleaner home screen, switch to **EN** in the top-right corner and click **Clean current contacts ->**.
+2. **Ring 1 (Disable Auto-Lock):** Click inside Ring 1 after setting Auto-Lock to **Never** on your iPhone.
+3. **Ring 2 (Check USB Connection):** Confirm your iPhone model and iOS version appear under Ring 2.
+4. **Ring 3 (Verify Jailbreak & Frida):** Keep your iPhone unlocked on the Home Screen while Ring 3 verifies `frida-server` and Contacts access. Allow Contacts permission on the iPhone if asked once.
+5. Click **Confirm & Open Workspace ->**. The app saves an automatic baseline backup (`.vcf` + `.json`) on your PC and opens Step `1.1`.
 
 ---
 
