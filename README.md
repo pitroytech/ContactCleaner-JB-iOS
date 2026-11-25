@@ -16,8 +16,8 @@
 
 **Contact Cleaner for JB iOS** is a standalone Windows desktop tool that cleans, normalizes, and merges iPhone contacts over a USB cable. All processing happens locally between your PC and iPhone over USB (nothing is uploaded to external servers). Once changes are written to your iPhone, iOS automatically syncs the cleaned contacts to iCloud and updates your iPad, Mac, and other Apple devices.
 
-- **Latest Release:** [`v1.0.1` (`ContactCleaner_JB_iOS_v1.0.1.exe`)](https://github.com/pitroytech/ContactCleaner-JB-iOS/releases/latest) (Windows 10/11 64-bit standalone GUI, no Python required)
-- **Interface Languages:** English and Vietnamese (`EN` / `VI` switch in the top bar)
+- **Latest Release:** [`v1.1.0` (`ContactCleaner_JB_iOS_v1.1.0.exe`)](https://github.com/pitroytech/ContactCleaner-JB-iOS/releases/latest) (Windows 10/11 64-bit standalone GUI, no Python required)
+- **Interface Languages & Regions:** Supports 100+ countries/regions (`Step 1.1` searchable country selector automatically switches to `EN` outside Vietnam and remembers your choice permanently)
 - **Data Safety:** Automatic dual backups (`.vcf` + `.json`), staged offline review before any write, 1-sample pilot sync, and live Zero-Phone-Loss verification
 
 ### Main Features
@@ -42,9 +42,9 @@
    - Opens any past snapshot or local iTunes / Apple Devices / 3uTools / iDescriptor backup directly on your PC for search and export without connecting an iPhone.
    - Restores selected missing contacts or rolls back the full address book after saving an automatic `pre_restore_safety` backup.
 
-5. **Standardize Phone Prefixes & Duplicate Lines (Steps 2.1 to 2.2)**
-   - Converts phone prefixes consistently between local format (`09xx...`) and international E.164 format (`+84...`).
-   - Updates legacy 11-digit Vietnamese mobile numbers (`016x`, `012x`, `018x`, `019x`) to current 10-digit carrier prefixes.
+5. **Global Phone Prefix Formatting & Custom AI Rule Pack Wizard (Steps 2.1 to 2.2)**
+   - Converts phone prefixes consistently between domestic format and international E.164 format (`+1`, `+44`, `+49`, `+84`, and 100+ countries).
+   - Includes a built-in Vietnam `11 -> 10` digit carrier pack plus a **Custom Country Pack Wizard (AI JSON)** in `Step 2.1` so you can generate, validate, and dry-run historical carrier or area-code prefix rules for your own country.
    - Removes duplicate phone lines stored inside the same contact card.
 
 ---
@@ -86,7 +86,7 @@ Contact Cleaner already bundles Frida for Windows inside the `.exe`. Your iPhone
 
 ##### Method A: Automatic Install Over USB (If OpenSSH is installed)
 
-1. Open `ContactCleaner_JB_iOS_v1.0.1.exe` on your PC.
+1. Open `ContactCleaner_JB_iOS_v1.1.0.exe` on your PC.
 2. Connect your unlocked iPhone via USB and tap **Trust** on the iPhone screen if prompted.
 3. Click **Setup / Update Frida** in the bottom-right corner of the app window.
 4. Select your jailbreak type (`Rootless arm64` for Dopamine iOS 15-18, or `Rootful arm` for iOS 12-14).
@@ -127,8 +127,8 @@ Contact Cleaner already bundles Frida for Windows inside the `.exe`. Your iPhone
 
 **Contact Cleaner for JB iOS** là phần mềm máy tính Windows chạy độc lập giúp gộp danh bạ trùng, dọn tên bị tách vụn và chuẩn hóa đầu số trên iPhone đã Jailbreak qua cáp USB. Toàn bộ dữ liệu chỉ xử lý cục bộ giữa máy tính và iPhone của bạn (không tải lên bất kỳ máy chủ bên ngoài nào). Ngay sau khi ghi vào iPhone, iOS sẽ tự động đồng bộ danh bạ sạch lên iCloud và cập nhật cho iPad, Mac cùng các thiết bị khác.
 
-- **Bản tải về mới nhất:** [`v1.0.1` (`ContactCleaner_JB_iOS_v1.0.1.exe`)](https://github.com/pitroytech/ContactCleaner-JB-iOS/releases/latest) (chạy thẳng trên Windows 10/11 64-bit, không cần cài Python)
-- **Ngôn ngữ giao diện:** Tiếng Việt và Tiếng Anh (nút chuyển `VI` / `EN` góc trên bên phải)
+- **Bản tải về mới nhất:** [`v1.1.0` (`ContactCleaner_JB_iOS_v1.1.0.exe`)](https://github.com/pitroytech/ContactCleaner-JB-iOS/releases/latest) (chạy thẳng trên Windows 10/11 64-bit, không cần cài Python)
+- **Ngôn ngữ & Quốc gia:** Hỗ trợ hơn 100 quốc gia (chọn nhanh ở Bước `1.1`, tự động chuyển sang Tiếng Anh nếu ở ngoài Việt Nam và lưu lại cho các lần mở sau)
 - **An toàn dữ liệu:** Tự động sao lưu kép (`.vcf` + `.json`) đầu phiên, duyệt nháp trước khi ghi, chạy thử 1 mẫu đại diện và kiểm tra bảo toàn 100% số điện thoại sau khi đồng bộ
 
 ### Các Tính Năng Chính
@@ -153,8 +153,8 @@ Contact Cleaner already bundles Frida for Windows inside the `.exe`. Your iPhone
    - Mở xem, tìm kiếm và xuất lẻ danh bạ cũ hoặc trích xuất trực tiếp từ bản sao lưu iTunes / Apple Devices / 3uTools / iDescriptor ngay trên máy tính mà không cần cắm iPhone.
    - Khôi phục chọn lọc từng liên hệ hoặc khôi phục nguyên trạng toàn bộ sổ danh bạ bất cứ lúc nào.
 
-5. **Chuẩn hóa đầu số & xóa số lặp nội bộ (Bước 2.1 đến 2.2)**
-   - Đồng bộ đầu số thống nhất về dạng `09xx...` hoặc quốc tế `+84...`, đồng thời đổi 21 đầu 11 số cũ về 10 số hiện hành.
+5. **Chuẩn hóa đầu số đa quốc gia & Tạo bộ đầu số riêng bằng AI JSON (Bước 2.1 đến 2.2)**
+   - Đồng bộ đầu số thống nhất về dạng nội địa hoặc quốc tế E.164 (`+84`, `+1`, `+44`...), tích hợp sẵn bộ đổi 21 đầu 11 số về 10 số của Việt Nam và **Wizard tạo bộ đầu số riêng theo quốc gia bằng AI JSON** ngay tại Bước `2.1`.
    - Xóa các dòng số điện thoại bị lưu lặp lại bên trong cùng một thẻ liên hệ.
 
 ---
