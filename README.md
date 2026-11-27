@@ -16,7 +16,7 @@
 
 **Contact Cleaner for JB iOS** is a standalone Windows desktop tool that cleans, normalizes, and merges iPhone contacts over a USB cable. All processing happens locally between your PC and iPhone over USB (nothing is uploaded to external servers). Once changes are written to your iPhone, iOS automatically syncs the cleaned contacts to iCloud and updates your iPad, Mac, and other Apple devices.
 
-- **Latest Release:** [`v1.1.2` (`ContactCleaner_JB_iOS_v1.1.2.exe`)](https://github.com/pitroytech/ContactCleaner-JB-iOS/releases/latest) (Windows 10/11 64-bit standalone GUI, no Python required)
+- **Latest Release:** [`v1.1.3` (`ContactCleaner_JB_iOS_v1.1.3.exe`)](https://github.com/pitroytech/ContactCleaner-JB-iOS/releases/latest) (Windows 10/11 64-bit standalone GUI, no Python required)
 - **Interface Languages & Regions:** Supports 100+ countries/regions (`Step 1.1` searchable country selector automatically switches to `EN` outside Vietnam and remembers your choice permanently)
 - **Data Safety:** Automatic dual backups (`.vcf` + `.json`), staged offline review before any write, 1-sample pilot sync, and live Zero-Phone-Loss verification
 
@@ -86,7 +86,7 @@ Contact Cleaner already bundles Frida for Windows inside the `.exe`. Your iPhone
 
 ##### Method A: Automatic Install Over USB (If OpenSSH is installed)
 
-1. Open `ContactCleaner_JB_iOS_v1.1.2.exe` on your PC.
+1. Open `ContactCleaner_JB_iOS_v1.1.3.exe` on your PC.
 2. Connect your unlocked iPhone via USB and tap **Trust** on the iPhone screen if prompted.
 3. Click **Setup / Update Frida** in the bottom-right corner of the app window.
 4. Select your jailbreak type (`Rootless arm64` for Dopamine iOS 15-18, or `Rootful arm` for iOS 12-14).
@@ -117,7 +117,7 @@ Contact Cleaner already bundles Frida for Windows inside the `.exe`. Your iPhone
 | **Ring 3 fails to connect to Contacts** | The iPhone screen is locked, or `frida-server` is not installed. | Swipe up to the iPhone Home Screen so it stays unlocked, then click **Check Environment & Frida** again. |
 | **Check SSH says "Authentication failed"** | Custom password set during Dopamine setup. | Click the eye icon in the SSH Password box and enter the password you set in Dopamine (instead of `alpine`). |
 | **Frida version mismatch** | PC Frida runtime and iPhone `frida-server` are on different versions. | Open **Setup / Update Frida** (bottom-right), click **Check Updates**, then click **Install on PC** and **Install on iPhone ->**. |
-| **Windows blocks the `.exe` ("Attack Surface Reduction" / Administrator block)** | Microsoft Defender ASR rule `01443614-cd74-433a-b99e-2ecdc07bfc25` blocks newly released unsigned `.exe` files (and ignores normal Defender AV exclusions). | Open **PowerShell as Administrator**, run `Unblock-File "C:\Path\To\ContactCleaner_JB_iOS_v1.1.2.exe"`, and temporarily switch ASR rule `01443614-cd74-433a-b99e-2ecdc07bfc25` to Audit mode while running (`Set-MpPreference -AttackSurfaceReductionRules_Ids 01443614-cd74-433a-b99e-2ecdc07bfc25 -AttackSurfaceReductionRules_Actions AuditMode`), then re-enable (`Enabled`) when done. |
+| **Windows blocks the `.exe` ("Attack Surface Reduction" / Administrator block)** | Microsoft Defender ASR rule `01443614-cd74-433a-b99e-2ecdc07bfc25` blocks newly released unsigned `.exe` files (and ignores normal Defender AV exclusions). | Open **PowerShell as Administrator**, run `Unblock-File "C:\Path\To\ContactCleaner_JB_iOS_v1.1.3.exe"`, and temporarily switch ASR rule `01443614-cd74-433a-b99e-2ecdc07bfc25` to Audit mode while running (`Set-MpPreference -AttackSurfaceReductionRules_Ids 01443614-cd74-433a-b99e-2ecdc07bfc25 -AttackSurfaceReductionRules_Actions AuditMode`), then re-enable (`Enabled`) when done. |
 
 ---
 ---
@@ -128,7 +128,7 @@ Contact Cleaner already bundles Frida for Windows inside the `.exe`. Your iPhone
 
 **Contact Cleaner for JB iOS** là phần mềm máy tính Windows chạy độc lập giúp gộp danh bạ trùng, dọn tên bị tách vụn và chuẩn hóa đầu số trên iPhone đã Jailbreak qua cáp USB. Toàn bộ dữ liệu chỉ xử lý cục bộ giữa máy tính và iPhone của bạn (không tải lên bất kỳ máy chủ bên ngoài nào). Ngay sau khi ghi vào iPhone, iOS sẽ tự động đồng bộ danh bạ sạch lên iCloud và cập nhật cho iPad, Mac cùng các thiết bị khác.
 
-- **Bản tải về mới nhất:** [`v1.1.2` (`ContactCleaner_JB_iOS_v1.1.2.exe`)](https://github.com/pitroytech/ContactCleaner-JB-iOS/releases/latest) (chạy thẳng trên Windows 10/11 64-bit, không cần cài Python)
+- **Bản tải về mới nhất:** [`v1.1.3` (`ContactCleaner_JB_iOS_v1.1.3.exe`)](https://github.com/pitroytech/ContactCleaner-JB-iOS/releases/latest) (chạy thẳng trên Windows 10/11 64-bit, không cần cài Python)
 - **Ngôn ngữ & Quốc gia:** Hỗ trợ hơn 100 quốc gia (chọn nhanh ở Bước `1.1`, tự động chuyển sang Tiếng Anh nếu ở ngoài Việt Nam và lưu lại cho các lần mở sau)
 - **An toàn dữ liệu:** Tự động sao lưu kép (`.vcf` + `.json`) đầu phiên, duyệt nháp trước khi ghi, chạy thử 1 mẫu đại diện và kiểm tra bảo toàn 100% số điện thoại sau khi đồng bộ
 
